@@ -1,0 +1,32 @@
+<h1>New Seminar</h1>
+
+{{ vm.seminar }}
+
+<form ng-submit="vm.addSeminar()">
+  <label for="title">Seminar title</label>
+  <input name="title" type="text" id="seminar_name" ng-model="vm.seminar.seminar_name">
+  <br />
+
+  <label for="description">Description</label>
+  <input name="description" type="text" id="description" ng-model="vm.seminar.description">
+  <br />
+
+  <label for="location_address">Address</label>
+  <input name="location_address" type="text" id="location_address" ng-model="vm.seminar.location_address">
+  <br />
+
+  <label for="date">Date</label>
+  <input name="date" type="text" id="date" ng-model="vm.seminar.date">
+  <br />
+
+  <label for="teaching_modules"> Repeat select a teaching module: </label>
+  <select name="teaching_modules" ng-model="vm.seminar.teaching_module_id"  ng-options="option.id as option.teaching_module_title for option in vm.teaching_modules">
+  </select>
+  <br />
+  <label for="countries"> Please select a country</label>
+  <select name="countries" ng-model="vm.seminar.country_id"  ng-options="option.id as option.country_name for option in vm.countries">
+  </select>
+  <br />
+  <input type="submit">
+
+</form>

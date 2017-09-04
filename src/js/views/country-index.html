@@ -1,0 +1,14 @@
+<h1>Countries index</h1>
+
+<div class="media" ng-repeat="country in countriesIndex.countries">
+  <div class="media-left">
+    <a ui-sref="#">
+      <img class="media-object" ng-src="{{ country.country_name }}">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ country.country_name }}</h4>
+    <p>{{ country.country_name }}</p>
+
+  </div>
+</div>
