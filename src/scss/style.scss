@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+
+body {
+  font-family: 'Playfair Display', serif;
+  // padding: 70px 0 0 0;
+  // max-width: 630px;
+  // margin: 0 auto;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.col {
+  border: 1px solid black;
+}
+
+.postsContainer {
+  margin: 0 auto;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 17px;
+  line-height: 1.42857143;
+  color: black;
+  background-color: white;
+  background-image: none;
+  border: 0.1px solid black;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.btn-primary {
+  color: black;
+  background-color: white;
+  border-color: black;
+  border: 2px solid black;
+}
+
+
+.btn-primary:hover {
+  color: black;
+  background-color: #f5f5f5;
+  border-color: black;
+}
+
+.buttonHolder {
+  text-align: center;
+}
+
+
+.background {
+
+  background: url('https://i.imgur.com/2Msze06.png') no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  background-size: 75%;
+  // -o-background-size: cover;
+  height: 100vh;
+  width: 900px;
+  // padding-bottom: 150px;
+}
+
+
+.logi-reg {
+  position: relative;
+  width: 500px;
+  margin: 100px auto;
+  background: rgba(255,255,255,.3);
+  padding: 20px 22px;
+  border: 1px solid;
+  border-radius: 12px;
+  border-color: black;
+
+}
+
+.avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.mini_avatar {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+.comment {
+  padding-left: 5px;
+}
+
+
+.container {
+  width: 928px;
+}
+
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.userProfile {
+  margin-top: 20px;
+
+}
+
+// .navbar {
+//   border-top: 1px solid #fff;
+//   border-bottom: 1px solid gray;
+// }
+
+#seminarContainer
+{
+  margin-bottom: 20px;
+  // border-bottom: 1px solid;
+}
+
+// .seminarImageIndex {
+//   height: 150px;
+//   width: 100%;
+// }
+//
+//
+// HTML
+//
+// <div class="fill">
+//     <img ...>
+// </div>
+// CSS
+
+.col-sm-offset-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.col-sm-offset-0 .seminarImageIndex {
+  flex-shrink: 0;
+  width: 210px;
+  height: 150px;
+}
+
+
+.row {
+  margin-right: -69px;
+  margin-left: -15px;
+  // background-color: grey;
+}
+
+.eventHeading {
+  padding-top: 10px;
+  text-align: left;
+  font-weight: 900;
+}
+
+.media-heading {
+  font-size: 15px;
+  font-weight: 900;
+}

@@ -1,23 +1,24 @@
-<!-- <h1>Seminars index</h1>
 
-<div class="media" ng-repeat="seminar in seminarsIndex.seminars">
-  <div class="media-left">
+<div>
+  <div ng-repeat="seminar in seminarsIndex.seminars" class="container" id="seminarContainer">
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-7">
+        <div class="row">
+          <div class="col-sm-offset-0 col-sm-4">
+            <img class="seminarImageIndex" ng-src="{{ seminar.image }}" alt="Description" />
+          </div>
+          <div class="col-sm-7">
+            <div class="eventHeading">
+              <h5 class="media-heading">{{ seminar.seminar_name }}</h5>
+              <p>{{ seminar.date }}</p>
+              <p>{{ seminar.country.country_name}}, {{ seminar.location_address }}</p>
+              <div class="buttonHolder">
+                <input class="btn btn-primary" ui-sref="seminarsShow({ id: seminar.id})" type="submit" value="Find out more...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="media-body">
-    <h4 class="media-heading">{{ seminar.seminar_name }}</h4>
-    <p>{{ seminar.location_address }}</p>
-    <p>{{ seminar.description }}</p>
-    <p>{{ seminar.date }}</p>
-    <p>{{ seminar.country.country_name}}</p>
-    <p>{{ seminar.teaching_module.teaching_module_title}}</p>
-
-
-  </div>
-</div> -->
-
-<ul>
-  <li ng-repeat="seminar in seminarsIndex.seminars">
-    <h2 ui-sref="seminarsShow({ id: seminar.id })">{{ seminar.seminar_name }}</h2>
-    <h4>{{ seminar.country.country_name }}</h4>
-  </li>
-</ul>
+</div>

@@ -1,0 +1,13 @@
+<h2>Add a new Post</h2>
+
+<form class="logi-reg" ng-submit="vm.addPost()">
+  <div class="form-group">
+    <input class="form-control" type="text" name="title" ng-model="vm.post.title_post" placeholder="Enter post Title">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="textarea" name="body" ng-model="vm.post.body_post" placeholder="Enter post Title">
+  </div>
+  <div class="buttonHolder">
+    <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+</form>

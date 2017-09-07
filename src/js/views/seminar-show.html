@@ -1,13 +1,37 @@
-<h1>Seminar show:</h1>
 
-<h3>{{ SeminarsShow.seminar.seminar_name }}</h3>
-<h4>{{ SeminarsShow.seminar.description }}</h4>
-<h4>{{ SeminarsShow.seminar.teaching_module.teaching_module_title }} </h4>
-<h4>{{ SeminarsShow.seminar.teaching_module.teaching_module_description }} </h4>
-<h4>{{ SeminarsShow.seminar.location_address }}</h4>
-<h4>{{ SeminarsShow.seminar.country.country_name }} </h4>
-<h4>{{ SeminarsShow.seminar.date }} </h4>
-<ul ng-repeat="user in SeminarsShow.seminar.users">
-  <li>{{user.name}}</li>
-</ul>
-<button type="button" ng-click="SeminarsShow.attendSeminar()" name="button">Attend</button>
+
+<div class="container" id="seminarColumn">
+  <div class="row">
+    <div class="col col-lg-3"><h2>{{ SeminarsShow.seminar.date }}</h2></div>
+    <div class="col col-lg-9"><h2>{{ SeminarsShow.seminar.seminar_name }}</h2></div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-3">{{ SeminarsShow.seminar.country.country_name }}</div>
+    <div class="col col-lg-9">{{ SeminarsShow.seminar.location_address }}</div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-12">{{ SeminarsShow.seminar.description }}</div>
+  </div>
+  <div class="row">
+    <div class="col col-lg-6"><ul ng-repeat="user in SeminarsShow.seminar.users">
+      <li>{{user.name}}</li>
+    </ul>
+  </div>
+    <div class="col col-lg-6"><button type="button" ng-click="SeminarsShow.attendSeminar()" name="button">Attend</button></div>
+  </div>
+</div>
+
+
+
+  <!--
+  <h3>{{ SeminarsShow.seminar.seminar_name }}</h3>
+  <h4>{{ SeminarsShow.seminar.description }}</h4>
+  <h4>{{ SeminarsShow.seminar.teaching_module.teaching_module_title }} </h4>
+  <h4>{{ SeminarsShow.seminar.teaching_module.teaching_module_description }} </h4>
+  <h4>{{ SeminarsShow.seminar.location_address }}</h4>
+  <h4>{{ SeminarsShow.seminar.country.country_name }} </h4>
+  <h4>{{ SeminarsShow.seminar.date }} </h4>
+  <ul ng-repeat="user in SeminarsShow.seminar.users">
+    <li>{{user.name}}</li>
+  </ul>
+  <button type="button" ng-click="SeminarsShow.attendSeminar()" name="button">Attend</button> -->

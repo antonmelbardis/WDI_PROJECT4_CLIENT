@@ -1,32 +1,38 @@
 <h1>New Seminar</h1>
 
-{{ vm.seminar }}
+<form class="logi-reg" ng-submit="vm.addSeminar()">
+  <div class="form-group">
+    <input class="form-control" type="text" name="seminar_name" ng-model="vm.seminar.seminar_name" placeholder="Enter seminar Title">
+  </div>
 
-<form ng-submit="vm.addSeminar()">
-  <label for="title">Seminar title</label>
-  <input name="title" type="text" id="seminar_name" ng-model="vm.seminar.seminar_name">
-  <br />
+  <div class="form-group">
+    <input class="form-control" type="text" name="description" ng-model="vm.seminar.description" placeholder="Enter seminar Description">
+  </div>
 
-  <label for="description">Description</label>
-  <input name="description" type="text" id="description" ng-model="vm.seminar.description">
-  <br />
+  <div class="form-group">
+    <input class="form-control" type="text" name="image" ng-model="vm.seminar.image" placeholder="Enter link for seminar image">
+  </div>
 
-  <label for="location_address">Address</label>
-  <input name="location_address" type="text" id="location_address" ng-model="vm.seminar.location_address">
-  <br />
+  <div class="form-group">
+    <input class="form-control" type="text" name="location_address" ng-model="vm.seminar.location_address" placeholder="Enter seminar Address (City, Street name)">
+  </div>
 
-  <label for="date">Date</label>
-  <input name="date" type="text" id="date" ng-model="vm.seminar.date">
-  <br />
+  <div class="form-group">
+    <input class="form-control" type="text" name="date" ng-model="vm.seminar.date" placeholder="Enter seminar Start date (YYYY-MM-DD)">
+  </div>
 
-  <label for="teaching_modules"> Repeat select a teaching module: </label>
-  <select name="teaching_modules" ng-model="vm.seminar.teaching_module_id"  ng-options="option.id as option.teaching_module_title for option in vm.teaching_modules">
-  </select>
-  <br />
-  <label for="countries"> Please select a country</label>
-  <select name="countries" ng-model="vm.seminar.country_id"  ng-options="option.id as option.country_name for option in vm.countries">
-  </select>
-  <br />
-  <input type="submit">
+  <div class="form-group">
+    <select class="form-control" type="text" name="date" ng-model="vm.seminar.teaching_module_id" ng-options="option.id as option.teaching_module_title for option in vm.teaching_modules"></select>
+  </div>
 
+  <div class="form-group">
+    <select class="form-control" type="text" name="date" ng-model="vm.seminar.country_id" ng-options="option.id as option.country_name for option in vm.countries" placeholder="Select seminar country"></select>
+  </div>
+
+
+
+
+  <div class="buttonHolder">
+    <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
 </form>

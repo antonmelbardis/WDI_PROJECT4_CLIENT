@@ -1,0 +1,50 @@
+<!-- <ul>
+<li ng-repeat="post in postsIndex.posts">
+<h3 ui-sref="postsShow({ id: post.id })">{{ post.title_post }}</h3>
+<h4 ui-sref="postsShow({ id: post.id })">{{ post.body_post }}</h4>
+</li>
+</ul> -->
+<!-- {{postsIndex.posts}} -->
+
+<div ng-repeat="post in postsIndex.posts | orderBy:'-' track by $index" class="postsContainer" id="postContainer">
+  <div>
+    <div class="post_body">
+      <div>
+        <div class="row">
+          <div>
+            <h3><strong><a href="#">{{ post.title_post }}</a></strong></h3>
+          </div>
+        </div>
+        <div>
+          <p>
+            {{ post.body_post }}
+          </p>
+        </div>
+        <div>
+          <p>
+            <i class="icon-user"></i> by <a href="#">{{post.user.username}}</a>
+            | <i class="icon-calendar"></i> {{post.created_at | date:'yyyy-MM-dd HH:mm'}}
+            | <i class="icon-comment"></i> <a ng-click="hideShow=(hideShow ? false : true)">{{post.comments.length}} Comments</a>
+          </p>
+        </div>
+        <div ng-if="hideShow">
+          <form ng-submit="postsIndex.addComment(post)">
+            <label for="title" class="commentTextArea">Say something:</label>
+            <input name="title" type="text" id="body" ng-model="postsIndex.comment.body">
+            <br />
+          </form>
+          <ul ng-repeat="comment in post.comments| orderBy:'-' track by $index">
+            <li><img class="mini_avatar" ng-src="{{ comment.user.photo }}" alt="Description" /><strong class="comment" ui-sref="usersShow({ id: comment.user.id})">{{comment.user.name}}</strong><p>{{comment.created_at | date:'yyyy-MM-dd HH:mm'}}</p></li>
+            <li> {{comment.body}}
+              <button ng-show="main.user.id==comment.user.id || main.user.id==1 || main.user.id==2 || main.user.id==3" type="button" class="close" aria-label="Close" ng-click="postsIndex.deleteComment(post, comment)">
+                {{comment.id}}
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+</div>

@@ -1,0 +1,55 @@
+<!-- <h1>Post show:</h1>
+
+<h3>{{ PostsShow.post.title_post }}</h3>
+<h4>{{ PostsShow.post.body_post }}</h4>
+-->
+
+
+
+<div class="container" id="postContainer">
+  <div class="row">
+    <div class="span12">
+      <div class="row">
+        <div class="span8">
+          <h4><strong><a href="#">{{ PostsShow.post.title_post }}</a></strong></h4>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="span10">
+          <p>
+            {{ PostsShow.post.body_post }}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span8">
+          <p></p>
+          <p>
+            <i class="icon-user"></i> by <a href="#">{{PostsShow.post.user.username}}</a>
+            | <i class="icon-calendar"></i> {{PostsShow.post.created_at}}
+            | <i class="icon-comment"></i> <a ng-click="hideShow=(hideShow ? false : true)">{{PostsShow.post.comments.length}} Comments</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div ng-if="hideShow">
+
+  <form ng-submit="PostsShow.addComment()">
+    <label for="title">Comment</label>
+    <input name="title" type="text" id="body" ng-model="PostsShow.comment.body">
+    <br />
+
+
+  </form>
+
+  <ul ng-repeat="comment in PostsShow.post.comments">
+    <li>{{comment.user.name}} said: {{comment.body}} at {{comment.created_at}}</li>
+  </ul>
+</div>
+
+</div>
